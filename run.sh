@@ -46,3 +46,27 @@ echo 20) Disable Touchpad (new) [UNDER CONSTRUCTION]
 echo 21) God Mode (new)
 echo 22) DNS Lookup (new) [UNDER CONSTRUCTION]
 echo ------------------------------------------------------------------------------------------
+set /p activate= LazyAnt~
+if %activate%==/1 goto :wifi key content
+if %activate%==/2 goto :calculator
+if %activate%==/3 goto :system information
+if %activate%==/4 goto :devops
+if %activate%==/5 goto :ipaddress
+if %activate%==/6 goto :hostname
+if %activate%==/7 goto :runningtasks
+if %activate%==/8 goto :portsandservices
+if %activate%==/9 goto :traceroute
+if %activate%==/10 goto :powerconfiguration
+if %activate%==/11 goto :macaddress
+if %activate%==/12 goto :allfilesscanner 
+if %activate%==/13 goto :allfilesscannerandrepair
+if %activate%==/14 goto :drivescanner
+if %activate%==/15 goto :datatransmitbooster
+if %activate%==/16 goto :matrixeffect
+if %activate%==/17 goto :systemdatabase
+if %activate%==/18 goto :dnsresolvercacherefresher
+if %activate%==/19 goto :ping
+if %activate%==/20 goto :disabletouchpad
+if %activate%==/21 goto :godmode
+if %activate%==/22 goto :dnslookup
+goto :mm
