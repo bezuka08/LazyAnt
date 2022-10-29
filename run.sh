@@ -70,3 +70,56 @@ if %activate%==/20 goto :disabletouchpad
 if %activate%==/21 goto :godmode
 if %activate%==/22 goto :dnslookup
 goto :mm
+:wifi key content
+color 05
+echo ------------------------------------------------------------------------------------------
+echo             _    ____   _    
+echo l        l I_I  /    \ I_I         ____            ___  ____    ___          ____     ___
+echo l        l  _  /        _     l / /    \ \   /    /    /    \ l/   l   l    /    \  l/   l   l
+echo l   /\   l l l l_____  l l    l/  l-----  \ /     l    l    l l    l __l__  l-----  l    l __l__
+echo l  /  \  l l l l       l l    l\  l        l      l    l    l l    l   l    l       l    l   l
+echo l_/    \_l l_l l       l_l    l \ \_____   l      \___ \____/ l    l   \__  \_____  l    l   \__
+echo ------------------------------------------------------------------------------------------
+goto :key
+
+:key
+netsh wlan show profiles
+echo ------------------------------------------------------------------------------------------ 
+:input name
+color 02
+echo ------------------------------------------------------------------------------------------
+echo Input wifi name or server ID:
+set /p name= LazyAnt~
+goto :b1
+
+:b1
+color 04
+echo ------------------------------------------------------------------------------------------
+echo Do you want to proceed with %name% ? [yes or no]
+set /p conf= LazyAnt~
+if %conf%==yes goto :yes1
+if %conf%==no goto :mm
+goto :input name
+
+:yes1
+color 08 
+netsh wlan show profile %name% key=clear
+echo ------------------------------------------------------------------------------------------
+pause 
+goto :mm
+
+
+***********************************************************************************************
+
+:system information
+color 09
+echo ------------------------------------------------------------------------------------------
+echo  _____      _____       ____           ____      ___     ___        
+echo /_____ \ / /_____ _/_  /___/ /____      /      _/_  ___ /__/ /___   _  _/_  __  ___      
+echo _____/  /  _____/ /__ /____ /  / /   __/__ /\/ /   /__//\   /  / / /-\ /__ _/_ /__/ /\/
+pause
+systeminfo
+pause
+goto :mm
+
+***********************************************************************************************
