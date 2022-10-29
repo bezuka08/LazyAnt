@@ -218,3 +218,131 @@ pause
 goto :mm
 
 ***********************************************************************************************
+:traceroute
+color 06
+echo ------------------------------------------------------------------------------------------
+tracert
+echo ------------------------------------------------------------------------------------------
+pause
+goto :mm
+
+***********************************************************************************************
+
+:powerconfiguration
+color 06
+echo ------------------------------------------------------------------------------------------
+powercfg
+echo ------------------------------------------------------------------------------------------
+pause
+goto :mm
+
+***********************************************************************************************
+
+:macaddress
+color 08
+echo ------------------------------------------------------------------------------------------
+echo     _    _         _      _____       _____                   _____   _____   _____   _____       
+echo    / \  / \       / \    /           /     l       l       l l     l l     l l    /  l    /      
+echo   /   \/   \     /   \   l            _____l  _____l  _____l l_____l l_____l 1_____  l____      
+echo  /          \   /-----\  l           l     l l     l l     l l \     l             l      l    
+echo /            \ /       \ \_____      l_____l l_____l l_____l l  \__  l_____/  /____l /____l
+pause
+getmac
+echo ------------------------------------------------------------------------------------------
+pause
+goto :mm
+
+***********************************************************************************************
+
+:allfilesscanner
+color 05
+echo ------------------------------------------------------------------------------------------
+SFC/VERIFYONLY
+echo ------------------------------------------------------------------------------------------
+pause
+goto :mm
+
+***********************************************************************************************
+
+:allfilesscannerandrepair
+color 02
+echo ------------------------------------------------------------------------------------------
+SFC/SCANNOW
+echo ------------------------------------------------------------------------------------------
+pause
+goto :mm
+
+***********************************************************************************************
+
+:drivescanner
+echo ------------------------------------------------------------------------------------------
+color 04
+echo Which DRIVE do you want to scan ?
+set /p drive= LazyAnt~
+echo Do you want to proceed with " %drive% " DRIVE ? [yes or no]
+set /p conf= LazyAnt~
+if %conf%==yes goto :scanthedrive
+if %conf%==no goto :drivescanner
+
+:scanthedrive
+echo ------------------------------------------------------------------------------------------
+chkdsk /f %drive%:
+echo ------------------------------------------------------------------------------------------
+pause
+goto :mm
+
+***********************************************************************************************
+
+:datatransmitbooster
+color 07
+echo  ___                        ________                            ______
+echo l   \     __           __      l  ___     __   \  ____         l      \  ____   ____              ____   __
+echo l    l   /  \  _l_    /  \     l l___l   /  \   l/    l  ___   l______/ /    \ /    \  ___ _l_   /    l l__l
+echo l    l  /----\  l    /----\    l l\     /----\  l     l l___   l      \ l    l l    l l___  l    l____J l\_
+echo l___/  /      \ \__ /      \   l l \   /      \ l     l ____l  l______/ \____/ \____/  ___l \___ \_____ l \
+pause
+echo ------------------------------------------------------------------------------------------
+bitsadmin
+echo ------------------------------------------------------------------------------------------
+pause
+goto :mm
+
+:matrixeffect
+@echo off
+color 2
+:start
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% 
+%random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+goto :start1
+:start1
+color 4
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+%random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+goto :start2
+:start2
+color 5
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+%random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+goto :start3
+:start3
+color 6
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+%random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+goto :start4
+:start4
+color 7
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+%random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+goto :start5
+:start5
+color 8
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+%random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+goto :start6
+:start6
+color 9
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+%random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+goto :start
+
+***********************************************************************************************
